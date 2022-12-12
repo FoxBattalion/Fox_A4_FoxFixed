@@ -26,7 +26,7 @@ namespace Lab5
         //stubed with just returning 5
         private int GetRandom(int MIN, int MAX)
         {
-            Random rand =   Random();
+            Random rand =  new Random();
             int randle = rand.Next(MIN, MAX++);
             return randle;
         }
@@ -59,8 +59,8 @@ namespace Lab5
         int tries = 1;
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            const int Attempts = 3;
-            string attempts = ATTMPTS.ToString();
+            const int ATTEMPTS = 3;
+            string attempts = ATTEMPTS.ToString();
 
             if (txtCode.Text != lblCode.Text && tries < ATTEMPTS)
             {
@@ -103,7 +103,7 @@ namespace Lab5
         private void ResetStatsGrp()
         {
             nudTotalNumbers.Value = 10;
-            lblSum.Text = "What's this I see?";
+            lblSum.Text = "";
             lblMean.Text = "";
             lblOdd.Text = "";
             lstNumbers.Items.Clear();
@@ -120,11 +120,11 @@ namespace Lab5
                    case true:
                     grpText.Show();
                     grpStats.Hide();
-                 
+                    break;
                     case false:
                     grpText.Hide();
                     grpStats.Show();
-                   
+                    break;
             }
         }
         //Now create a checked change event for both of the radio buttons and call the SetupOption for both events
@@ -137,7 +137,7 @@ namespace Lab5
         //for this one you also call the function to reset the stats group box when it becomes visible
         private void radStats_CheckedChanged(object sender, EventArgs e)
         {
-            Setupoption();
+            SetupOption();
             ResetStatsGrp();
         }
         //Create the click event for the reset button in the text group box
@@ -258,7 +258,7 @@ namespace Lab5
             const int MIN = 1000;
             const int MAX = 5000;
             lstNumbers.Items.Clear();
-            Random randle = new Random();
+            Random randle = new Random(733);
             for (int count = 0; count < nudTotalNumbers.Value; count++)
             {
                 
@@ -287,7 +287,7 @@ namespace Lab5
             {
                 int value = Convert.ToInt32(lstNumbers.Items[counter]);
                 sum += value;
-                counter+;
+                counter++;
 
             }
             return sum;
