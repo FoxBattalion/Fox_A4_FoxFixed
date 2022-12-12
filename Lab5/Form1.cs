@@ -103,7 +103,7 @@ namespace Lab5
         private void ResetStatsGrp()
         {
             nudTotalNumbers.Value = 10;
-            lblSum.Text = "What's this I see?";
+            lblSum.Text = "";
             lblMean.Text = "";
             lblOdd.Text = "";
             lstNumbers.Items.Clear();
