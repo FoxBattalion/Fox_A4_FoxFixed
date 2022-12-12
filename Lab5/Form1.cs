@@ -59,8 +59,8 @@ namespace Lab5
         int tries = 1;
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            const int Attempts = 3;
-            string attempts = ATTMPTS.ToString();
+            const int ATTEMPTS = 3;
+            string attempts = ATTEMPTS.ToString();
 
             if (txtCode.Text != lblCode.Text && tries < ATTEMPTS)
             {
