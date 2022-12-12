@@ -137,7 +137,7 @@ namespace Lab5
         //for this one you also call the function to reset the stats group box when it becomes visible
         private void radStats_CheckedChanged(object sender, EventArgs e)
         {
-            Setupoption();
+            SetupOption();
             ResetStatsGrp();
         }
         //Create the click event for the reset button in the text group box
